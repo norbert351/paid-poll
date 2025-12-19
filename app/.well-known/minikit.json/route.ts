@@ -1,32 +1,10 @@
 import { NextResponse } from "next/server";
+import { minikitConfig } from "@/lib/minikit.config";
 
-export async function GET() {
-  return NextResponse.json(
-    {
-      accountAssociation: {
-        header: "",
-        payload: "",
-        signature: ""
-      },
-      miniapp: {
-        version: "1",
-        name: "Paid Polls",
-        subtitle: "Vote with ETH or USDC",
-        description: "Create and vote on on-chain polls on Base",
-        homeUrl: "https://paid-poll.vercel.app",
-        iconUrl: "https://paid-poll.vercel.app/icon.png",
-        heroImageUrl: "https://paid-poll.vercel.app/hero.png",
-        screenshotUrls: [
-          "https://paid-poll.vercel.app/screen.png"
-        ],
-        primaryCategory: "social",
-        tags: ["polls", "base", "usdc", "eth"]
-      }
-    },
-    {
-      headers: {
-        "Content-Type": "application/json"
-      }
+export function GET() {
+  return NextResponse.json(minikitConfig, {
+    headers: {
+      "Content-Type": "application/json"
     }
-  );
+  });
 }
