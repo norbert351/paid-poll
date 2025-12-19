@@ -28,7 +28,7 @@ export default function CreatePoll() {
 
       <input
         placeholder="Question"
-        className="w-full p-2 bg-amber-200"
+        className="w-full p-2 bg-blue-300 text-black"
         onChange={e => setQuestion(e.target.value)}
       />
 
@@ -36,7 +36,7 @@ export default function CreatePoll() {
         <input
           key={i}
           placeholder={`Option ${i + 1}`}
-          className="w-full p-2 bg-amber-200"
+          className="w-full p-2 bg-blue-300 text-black"
           onChange={e => {
             const o = [...options];
             o[i] = e.target.value;
