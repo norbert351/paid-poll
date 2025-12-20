@@ -1,28 +1,23 @@
-"use client";
-
 import { ethers } from "ethers";
 import PaidPollsABI from "./PaidPolls.json";
 
-/**
- * Get BrowserProvider safely
- */
-export async function getProvider(): Promise<ethers.BrowserProvider> {
-  if (typeof window === "undefined" || !window.ethereum) {
-    throw new Error("Wallet not found");
+// ✅ MUST be NEXT_PUBLIC
+const CONTRACT_ADDRESS = process.env.NEXT_PUBLIC_PAID_POLLS_ADDRESS;
+
+export async function getContract() {
+  if (!CONTRACT_ADDRESS) {
+    throw new Error("Contract address is missing");
   }
 
-  return new ethers.BrowserProvider(window.ethereum);
-}
+  if (!window.ethereum) {
+    throw new Error("No wallet found");
+  }
 
-/**
- * Get signer-connected PaidPolls contract
- */
-export async function getContract(): Promise<ethers.Contract> {
-  const provider = await getProvider();
+  const provider = new ethers.BrowserProvider(window.ethereum);
   const signer = await provider.getSigner();
 
   return new ethers.Contract(
-    process.env.NEXT_PUBLIC_CONTRACT!,
+    CONTRACT_ADDRESS,
     PaidPollsABI,
     signer
   );
