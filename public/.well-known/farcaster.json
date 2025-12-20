@@ -7,6 +7,9 @@
   "miniapp": {
     "version": "1",
     "name": "Paid Polls",
+
+    "imageUrl": "https://paid-poll.vercel.app/hero.png",
+
     "homeUrl": "https://paid-poll.vercel.app",
     "iconUrl": "https://paid-poll.vercel.app/icon.png",
     "splashImageUrl": "https://paid-poll.vercel.app/splash.png",
@@ -22,7 +25,7 @@
     "heroImageUrl": "https://paid-poll.vercel.app/hero.png",
     "tagline": "Paid on-chain polls",
     "ogTitle": "Paid Polls on Base",
-    "ogDescription": "Vote using ETH or USDC.",
+    "ogDescription": "Vote using ETH or USDC",
     "ogImageUrl": "https://paid-poll.vercel.app/og.png"
   }
 }
