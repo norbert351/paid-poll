@@ -1,0 +1,28 @@
+{
+  "accountAssociation": {
+    "header": "",
+    "payload": "",
+    "signature": ""
+  },
+  "miniapp": {
+    "version": "1",
+    "name": "Paid Polls",
+    "homeUrl": "https://paid-poll.vercel.app",
+    "iconUrl": "https://paid-poll.vercel.app/icon.png",
+    "splashImageUrl": "https://paid-poll.vercel.app/splash.png",
+    "splashBackgroundColor": "#000000",
+    "subtitle": "Vote with ETH or USDC",
+    "description": "Create and vote on on-chain polls on Base",
+    "screenshotUrls": [
+      "https://paid-poll.vercel.app/screen1.png",
+      "https://paid-poll.vercel.app/screen2.png"
+    ],
+    "primaryCategory": "social",
+    "tags": ["polls", "base", "usdc", "eth"],
+    "heroImageUrl": "https://paid-poll.vercel.app/hero.png",
+    "tagline": "Paid on-chain polls",
+    "ogTitle": "Paid Polls on Base",
+    "ogDescription": "Vote using ETH or USDC.",
+    "ogImageUrl": "https://paid-poll.vercel.app/og.png"
+  }
+}
